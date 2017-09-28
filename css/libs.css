@@ -1,0 +1,107 @@
+
+
+.navbar {
+    border:1;	
+    text-align:center;				
+}
+
+.navbar-default {
+    position: absolute;
+    display: flex;	
+    background-color: #ffffff;
+    border-color: #c4c4c4;
+    justify-content: center;
+    flex-wrap: wrap;		
+}	
+
+.navbar li a{		
+    height: 71px;	
+    padding-top: 33px;		
+    font-size: 14px !important;
+    font-weight:bold;
+    color: #535353 !important;		  
+}
+
+.navbar-nav li a:hover {
+    color: #2797de !important;
+}
+
+html,body {
+	position: fixed;
+	width:100%; height:100%; padding: 0; margin: 0;
+    background: #f2f2f2;
+}
+.panel-confirm{
+    background:#2797DE;
+}
+.panel-primary, .panel-heading{
+    text-align: center;
+    color:white;
+}
+
+.bg-1 { 
+    background-color: #f2f2f2;     
+}
+.bg-2 { 
+    background-color: #ffffff;     
+}
+
+.form-control{
+    -webkit-border-radius:	 	0;
+    -moz-border-radius: 		0;
+    border-radius: 				0;
+}
+
+.btn {	
+    border:0;	
+    background-color: #2797de;
+    border-radius:              0;
+    -webkit-border-radius:      0;
+    -moz-border-radius:         0;
+}
+.form{
+	display: block;		
+    width:	708px !important;
+    height: 570px !important;
+    padding: 45px;		
+}
+
+.form-group_confirmation {
+    width: 630px !important;
+    padding: 48px 43px;
+}
+
+.span{
+	color: red;		
+	font-weight: bold;
+}
+
+table{
+  width:	708px !important;
+  height:	570px !important;
+  border: 0;
+  border-collapse: collapse;
+  padding: 0px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+.error{
+    color:red;
+    padding-bottom: 10px;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid #DA3637;
+}
+
+input.ng-valid.ng-touched{
+    border: 1px solid #509D12;
+}
+
+.ng-invalid .btn{
+    background: gray;
+}

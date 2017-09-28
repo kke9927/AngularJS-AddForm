@@ -1,0 +1,33 @@
+DROP TABLE USERS;
+DROP TABLE PROVINCES;
+
+CREATE TABLE PROVINCES (
+    id 			INT(11) NOT NULL AUTO_INCREMENT,
+    name 		VARCHAR(50) NOT NULL,
+	PRIMARY KEY (id)
+);
+
+INSERT INTO PROVINCES (name) VALUES ('Ontario');
+INSERT INTO PROVINCES (name) VALUES ('Québec');
+INSERT INTO PROVINCES (name) VALUES ('Nova Scotia');
+INSERT INTO PROVINCES (name) VALUES ('New Brunswick');
+INSERT INTO PROVINCES (name) VALUES ('Manitoba');
+INSERT INTO PROVINCES (name) VALUES ('British Columbia');
+INSERT INTO PROVINCES (name) VALUES ('Prince Edward Island');
+INSERT INTO PROVINCES (name) VALUES ('Saskatchewan');
+INSERT INTO PROVINCES (name) VALUES ('Alberta');
+INSERT INTO PROVINCES (name) VALUES ('Newfoundland and Labrador');
+INSERT INTO PROVINCES (name) VALUES ('Northwest Territories');
+INSERT INTO PROVINCES (name) VALUES ('Yukon');
+INSERT INTO PROVINCES (name) VALUES ('Nunavut');
+
+CREATE TABLE USERS (
+	id 				INT(11) 		AUTO_INCREMENT,
+	name 			VARCHAR(50) 	NOT NULL,
+	province_id 	INT(11),
+	telephone 		VARCHAR(20) 	NOT NULL,
+	postalcode 		VARCHAR(7) 		NOT NULL,
+	salary 			DECIMAL(7,2) 	NOT NULL,
+	PRIMARY KEY (id),
+    fOREIGN KEY (province_id) REFERENCES PROVINCES(id)
+);

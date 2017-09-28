@@ -1,0 +1,54 @@
+[
+        {
+        "pid" : 1,
+        "name" : "Ontario"
+        },
+        {
+        "pid" : 2,
+        "name" : "Québec"
+        },
+        {
+        "pid" : 3,
+        "name" : "Nova Scotia"
+        },
+        {
+        "pid" : 4,
+        "name" : "New Brunswick"
+        },
+        {
+        "pid" : 5,
+        "name" : "Manitoba"
+        },
+        {
+        "pid" : 6,
+        "name" : "British Columbia"
+        },
+        {
+        "pid" : 7,
+        "name" : "Prince Edward Island"
+        },
+        {
+        "pid" : 8,
+        "name" : "Saskatchewan"
+        },
+        {
+        "pid" : 9,
+        "name" : "Alberta"
+        },
+        {
+        "pid" : 10,
+        "name" : "Newfoundland and Labrador"
+        },
+        {
+        "pid" : 11,
+        "name" : "Northwest Territories"
+        },
+        {
+        "pid" : 12,
+        "name" : "Yukon"
+        },
+        {
+        "pid" : 13,
+        "name" : "Nunavut"
+        }
+]

@@ -1,0 +1,59 @@
+<div class="container-fluid bg-1">
+    <div class="container ">
+        <div class="row" style="margin-top:90px">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 bg-2" style=" width:724; padding-top:35px; padding-bottom:35px; padding-right:35px; padding-left:35px;">
+                <form name="userForm" ng-submit="submitForm(user)" novalidate>
+                    <div class="form-group col-sm-12">
+                        <label for="name">NAME<font color="red">*</font></label><br />
+                        <input type="text" name="name" class="form-control input-lg" ng-pattern="/^([a-zA-Z]+\s)*[a-zA-Z]+$/" ng-model="user.name"
+                            ng-minlength="2" placeholder="Enter your name" ng-required="true" />
+                        <p class="error validationerror" ng-show="userForm.name.$touched && userForm.name.$error.required">This is a required field</p>
+                        <p class="error validationerror" ng-show="userForm.name.$invalid &&  !userForm.name.$pristine && userForm.name.$touched">Your name must be at least 2 characters</p>
+                    </div>
+                    <br /> 
+                    <div class="form-group col-sm-12">
+                        <label for="province">PROVINCE<font color="red">*</font></label> <br />
+                        <select name="province" ng-model="user.province" ng-options="item.name for item in provinces" class="form-control input-lg" ng-required="true"> 
+                        <option value="">Select provinces</option>
+                          <!--  <option value="">--- Please select ---</option> 
+                            <option ng-repeat="province in provinces" ng-value="province.pid">{{province.name}}</option> -->
+                        </select>
+                        <p class="error validationerror" ng-show="userForm.province.$touched && userForm.province.$invalid && userForm.province.$error.required">You must select at least one province</p>
+                        <br />
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="telephone">TELEPHONE<font color="red">*</font></label>
+                        <input type="text" name="telephone" class="form-control input-lg" ng-pattern="/^(\(\d{3}\) |\d{3}-)\d{3}-\d{4}$/" ng-model="user.telephone"
+                            placeholder="Enter your telephone number" ng-required="true" />
+                        <p class="error validationerror" ng-show="userForm.telephone.$touched && userForm.telephone.$error.required">This is a required field</p>
+                        <p class="error validationerror" ng-show="userForm.telephone.$invalid &&  !userForm.telephone.$pristine && userForm.telephone.$touched ">Telephone format following combination ex) (123) 123-4567 or 123-123-4567 </p>
+                        <br/>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label for="postalcode">POSTALCODE<font color="red">*</font></label><br />
+                        <input type="text" name="postalcode" class="form-control input-lg" ng-pattern="/^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/" ng-model="user.postalcode"
+                            placeholder="Enter your postal code" ng-required="true" />
+                        <p class="error validationerror" ng-show="userForm.postalcode.$touched && userForm.postalcode.$error.required">This is a required field</p>
+                        <p class="error validationerror" ng-show="userForm.postalcode.$invalid && !userForm.postalcode.$pristine && userForm.postalcode.$touched">Postal code format following combination ex) M5G 2G8 or M5G2G8 </p>
+                    </div>
+                         <br/>
+                    <div class="form-group col-sm-12">
+                        <label for="salary">SALARY<font color="red">*</font></label><br />
+                        <input type="text" name="salary" class="form-control input-lg" ng-model="user.salary" placeholder="Enter your salary expectation"
+                            ng-required="true" />
+                        <p class="error validationerror" ng-show="userForm.salary.$touched && userForm.salary.$error.required">This is a required field</p>
+                        <p class="error validationerror" ng-show="userForm.salary.$invalid && !userForm.salary.$pristine && userForm.salary.$touched">Postal code format following combination ex) M5G 2G8 or M5G2G8 </p>
+                        <br/>
+                    </div>
+                    <div class="form-group col-sm-12">
+                    <input type="submit" class="btn btn-primary btn-lg pull-right" style="width:140px;height:55px" ng-disabled="userForm.$invalid" value="save">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>

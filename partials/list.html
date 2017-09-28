@@ -1,0 +1,34 @@
+<!------------------code---------------start---------------->
+<!-- Container (Listing Section) -->				
+
+<div class="container-fluid bg-1" style="height:100%">
+	<div class="container ">
+	
+		<div class="row pull-center" style="margin-top:8%;" >
+			<div class="col-lg-1 "></div>	
+			<div class="col-lg-10" >
+				<div class="row listing vcenter" style="background-color: #535353; ">				
+					<div class="col-lg-2" ><span style="color:white">Name</span></div>
+					<div class="col-lg-3" ><span style="color:white">Province</span></div>			
+					<div class="col-lg-2" ><span style="color:white">Telephone</span></div>
+					<div class="col-lg-2" ><span style="color:white">Postal code</span></div>
+					<div class="col-lg-2" ><span style="color:white">Salary</span></div>				
+				</div>
+				<div id="content">
+					<div class="row listing vcenter" style=" background-color:#ffffff;">
+						<div ng-repeat="user in users  |  startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
+							<div class="col-lg-2 plist" style="border-bottom:1px solid #ddd;"><span>{{ user.Name }}</span></div>
+							<div class="col-lg-3 plist" style="border-bottom:1px solid #ddd;"><span>{{ user.Province }}</span></div>			
+							<div class="col-lg-2 plist" style="border-bottom:1px solid #ddd;"><span>{{ user.Telephone }}</span></div>
+							<div class="col-lg-2 plist" style="border-bottom:1px solid #ddd;"><span>{{ user.PostalCode }}</span></div>
+							<div class="col-lg-2 plist" style="border-bottom:1px solid #ddd;"><span>{{ user.Salary }}</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center text-sm-right">
+				<pagination page="currentPage" max-size="noOfPages" total-items="totalItems" items-per-page="entryLimit"></pagination>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
