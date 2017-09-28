@@ -41,7 +41,7 @@ userControllers.controller('UserFormController', ['$scope', '$http', '$location'
         .success(function(data) {
            console.log(data);
         })
-       // $location.path('confirmation');
+        $location.path('confirmation');
     }
 
 }]);
